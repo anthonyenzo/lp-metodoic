@@ -68,7 +68,7 @@ export default function Home() {
       <div className="hero-glow" />
       <div className="hero-copy" data-reveal>
         <div className="eyebrow"><span>MINITREINAMENTO PRÁTICO</span><span>EDIÇÃO 2026</span></div>
-        <h1>CRIE QUEM<br />NUNCA <em>EXISTIU.</em></h1>
+        <h1>CRIE. CRESÇA.<br /><em>VENDA.</em><br /><span>SEM PRECISAR APARECER.</span></h1>
         <p className="hero-lead">Domine o método para criar <strong>influencers e clones ultrarrealistas</strong>, produzir vídeos profissionais e transformar essa habilidade em conteúdo, vendas ou serviço para marcas.</p>
         <p className="hero-promise">Finalize o treinamento, entre para a comunidade e saia pronto para aplicar — com caminhos para começar a monetizar essa habilidade desde o primeiro dia.</p>
         <BuyButton label="QUERO DOMINAR O MÉTODO" />
@@ -151,3 +151,4 @@ export default function Home() {
     <div className="mobile-buy"><div><small>PAGAMENTO ÚNICO</small><strong>R$ 97</strong></div><a href={checkout} target="_blank" rel="noopener noreferrer">QUERO ACESSAR</a></div>
   </main>;
 }
+

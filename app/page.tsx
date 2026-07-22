@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 const checkout = "https://checkout.wiven.com.br/checkout/cmqqbdlw607x001put1j4asq8?offer=2J6IE74";
 
@@ -39,7 +40,7 @@ const faqs = [
 ];
 
 function BuyButton({ label = "QUERO COMEÇAR AGORA" }: { label?: string }) {
-  return <a className="buy-button" href={checkout} target="_blank" rel="noopener noreferrer"><span>{label}</span><b aria-hidden="true"><i className="arrow-icon" /></b></a>;
+  return <a className="buy-button" href={checkout} target="_blank" rel="noopener noreferrer"><span>{label}</span><b aria-hidden="true"><ArrowUpRight className="arrow-icon" strokeWidth={1.75} /></b></a>;
 }
 
 export default function Home() {
@@ -100,7 +101,7 @@ export default function Home() {
       <div className="section-kicker light" data-reveal>O QUE VOCÊ SERÁ CAPAZ DE FAZER</div>
       <div className="outcomes-grid">
         <div className="outcomes-title" data-reveal><h2>DO ZERO AO<br /><em>CONTEÚDO PRONTO.</em></h2><p>Uma habilidade. Diversas formas de aplicação.</p></div>
-        <div className="outcomes-list">{outcomes.map(([number, title, copy]) => <article key={number} data-reveal><b>{number}</b><div><h3>{title}</h3><p>{copy}</p></div><span className="arrow-icon" aria-hidden="true" /></article>)}</div>
+        <div className="outcomes-list">{outcomes.map(([number, title, copy]) => <article key={number} data-reveal><b>{number}</b><div><h3>{title}</h3><p>{copy}</p></div><ArrowUpRight className="arrow-icon" strokeWidth={1.75} aria-hidden="true" /></article>)}</div>
       </div>
       <div className="use-cases" data-reveal><span>PARA APLICAR EM:</span><p>TikTok Shop</p><p>Instagram orgânico</p><p>Afiliados</p><p>Infoprodutos</p><p>Serviços para marcas</p></div>
     </section>

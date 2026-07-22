@@ -90,7 +90,7 @@ h1, h2 { font-family: var(--font-clarify); font-weight: 900; letter-spacing: -.0
 .outcomes-list b { color: var(--yellow); font-size: 11px; }
 .outcomes-list h3 { font-size: 28px; margin: -5px 0 9px; }
 .outcomes-list p { margin: 0; color: #95938d; line-height: 1.55; max-width: 550px; }
-.outcomes-list article > span { color: var(--yellow); font-size: 22px; }
+.outcomes-list article > .arrow-icon { color: var(--yellow); }
 .use-cases { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 90px; padding-top: 25px; border-top: 1px solid var(--line); }
 .use-cases span { color: #666; font-size: 10px; font-weight: 900; letter-spacing: .15em; margin-right: 16px; }
 .use-cases p { border: 1px solid var(--line); padding: 11px 16px; margin: 0; font-size: 12px; }
@@ -299,33 +299,13 @@ footer nav a:hover { color: var(--yellow); }
 .buy-button, .topbar-cta, .section-kicker, .eyebrow, .topbar-note { font-weight: 780; }
 
 .arrow-icon {
-  position: relative;
   display: block;
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
   color: currentColor;
-}
-.arrow-icon::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 1.5px;
-  left: 0;
-  top: 9px;
-  background: currentColor;
-  transform: rotate(-45deg);
-  transform-origin: center;
-}
-.arrow-icon::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  right: 1px;
-  top: 1px;
-  border-top: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .play-icon {
   display: block;

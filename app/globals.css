@@ -309,21 +309,21 @@ footer nav a:hover { color: var(--yellow); }
 .arrow-icon::before {
   content: "";
   position: absolute;
-  width: 11px;
+  width: 18px;
   height: 1.5px;
-  left: 2px;
+  left: 0;
   top: 9px;
   background: currentColor;
   transform: rotate(-45deg);
-  transform-origin: right center;
+  transform-origin: center;
 }
 .arrow-icon::after {
   content: "";
   position: absolute;
-  width: 7px;
-  height: 7px;
-  right: 2px;
-  top: 2px;
+  width: 8px;
+  height: 8px;
+  right: 1px;
+  top: 1px;
   border-top: 1.5px solid currentColor;
   border-right: 1.5px solid currentColor;
 }

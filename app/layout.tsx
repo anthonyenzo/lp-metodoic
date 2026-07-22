@@ -1,7 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://metodoic.viralizeaimachine.com"),
   title: "Método Influencer/Clone de IA Ultrarrealista",
   description: "Aprenda a criar influencers e clones de IA ultrarrealistas, gerar vídeos profissionais e transformar essa habilidade em conteúdo, vendas ou serviços.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },

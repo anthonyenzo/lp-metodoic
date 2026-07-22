@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { useEffect } from "react";
@@ -39,7 +39,7 @@ const faqs = [
 ];
 
 function BuyButton({ label = "QUERO COMEÇAR AGORA" }: { label?: string }) {
-  return <a className="buy-button" href={checkout} target="_blank" rel="noopener noreferrer"><span>{label}</span><b aria-hidden="true">↗</b></a>;
+  return <a className="buy-button" href={checkout} target="_blank" rel="noopener noreferrer"><span>{label}</span><b aria-hidden="true"><i className="arrow-icon" /></b></a>;
 }
 
 export default function Home() {
@@ -72,13 +72,13 @@ export default function Home() {
         <p className="hero-lead">Domine o método para criar <strong>influencers e clones ultrarrealistas</strong>, produzir vídeos profissionais e transformar essa habilidade em conteúdo, vendas ou serviço para marcas.</p>
         <p className="hero-promise">Finalize o treinamento, entre para a comunidade e saia pronto para aplicar — com caminhos para começar a monetizar essa habilidade desde o primeiro dia.</p>
         <BuyButton label="QUERO DOMINAR O MÉTODO" />
-        <div className="hero-trust"><span>✓ Pagamento único</span><span>✓ 7 dias de garantia</span><span>✓ Acesso imediato</span></div>
+        <div className="hero-trust"><span><i className="check-icon" aria-hidden="true" />Pagamento único</span><span><i className="check-icon" aria-hidden="true" />7 dias de garantia</span><span><i className="check-icon" aria-hidden="true" />Acesso imediato</span></div>
       </div>
       <div className="hero-media" data-reveal>
         <div className="media-label">ASSISTA E ENTENDA O MÉTODO <span>01:00</span></div>
         <div className="video-placeholder">
           <Image src="/metodo-cover.png" alt="Método Influencer e Clone de IA Ultrarrealista, com Anthony Ribeiro" fill priority sizes="(max-width: 900px) 100vw, 48vw" />
-          <div className="video-shade" /><button type="button" aria-label="Vídeo de vendas em breve"><span>▶</span></button><p>VSL EM BREVE</p>
+          <div className="video-shade" /><button type="button" aria-label="Vídeo de vendas em breve"><span className="play-icon" aria-hidden="true" /></button><p>VSL EM BREVE</p>
         </div>
         <div className="media-foot"><span>CONTEÚDO DIRETO AO PONTO</span><span>SEM EXPERIÊNCIA PRÉVIA</span></div>
       </div>
@@ -100,20 +100,20 @@ export default function Home() {
       <div className="section-kicker light" data-reveal>O QUE VOCÊ SERÁ CAPAZ DE FAZER</div>
       <div className="outcomes-grid">
         <div className="outcomes-title" data-reveal><h2>DO ZERO AO<br /><em>CONTEÚDO PRONTO.</em></h2><p>Uma habilidade. Diversas formas de aplicação.</p></div>
-        <div className="outcomes-list">{outcomes.map(([number, title, copy]) => <article key={number} data-reveal><b>{number}</b><div><h3>{title}</h3><p>{copy}</p></div><span>↗</span></article>)}</div>
+        <div className="outcomes-list">{outcomes.map(([number, title, copy]) => <article key={number} data-reveal><b>{number}</b><div><h3>{title}</h3><p>{copy}</p></div><span className="arrow-icon" aria-hidden="true" /></article>)}</div>
       </div>
       <div className="use-cases" data-reveal><span>PARA APLICAR EM:</span><p>TikTok Shop</p><p>Instagram orgânico</p><p>Afiliados</p><p>Infoprodutos</p><p>Serviços para marcas</p></div>
     </section>
 
     <section className="section proof-section">
       <div className="proof-head" data-reveal><div><span className="section-kicker">VEJA O POTENCIAL</span><h2>CRIADO COM<br />O <em>MÉTODO.</em></h2></div><p>Este espaço receberá vídeos reais de influencers e clones produzidos com o processo ensinado no treinamento.</p></div>
-      <div className="showcase-grid" data-reveal>{["INFLUENCER + PRODUTO", "VÍDEO EM POV", "CLONE ULTRARREALISTA"].map((title, index) => <article className="showcase-card" key={title}><div className="showcase-number">0{index + 1}</div><div className="play-mini">▶</div><p>{title}</p><small>VÍDEO DEMONSTRATIVO EM BREVE</small></article>)}</div>
+      <div className="showcase-grid" data-reveal>{["INFLUENCER + PRODUTO", "VÍDEO EM POV", "CLONE ULTRARREALISTA"].map((title, index) => <article className="showcase-card" key={title}><div className="showcase-number">0{index + 1}</div><div className="play-mini"><span className="play-icon" aria-hidden="true" /></div><p>{title}</p><small>VÍDEO DEMONSTRATIVO EM BREVE</small></article>)}</div>
       <p className="proof-note" data-reveal>Sem depoimentos inventados. Aqui você verá exemplos reais do que o método produz.</p>
     </section>
 
     <section className="section audience-section"><div className="audience-grid">
       <div data-reveal><span className="section-kicker light">FEITO PARA QUEM QUER EXECUTAR</span><h2>ISSO É PARA<br /><em>VOCÊ?</em></h2><p>Se você se identifica com pelo menos um destes pontos, o método foi construído para encurtar seu caminho.</p></div>
-      <div className="check-list" data-reveal>{audiences.map((item) => <p key={item}><span>✓</span>{item}</p>)}</div>
+      <div className="check-list" data-reveal>{audiences.map((item) => <p key={item}><span><i className="check-icon" aria-hidden="true" /></span>{item}</p>)}</div>
     </div></section>
 
     <section className="section curriculum-section" id="conteudo">
@@ -139,7 +139,7 @@ export default function Home() {
     </section>
 
     <section className="section offer-section" id="oferta">
-      <div className="offer-card" data-reveal><div className="offer-main"><span className="section-kicker light">CONDIÇÃO PARA OS PRIMEIROS ALUNOS</span><h2>TUDO O QUE VOCÊ PRECISA PARA COMEÇAR.</h2><ul><li>✓ Treinamento completo e prático</li><li>✓ Acesso pelo celular ou computador</li><li>✓ Agentes MAX e RUI</li><li>✓ Comunidade exclusiva no WhatsApp</li><li>✓ Suporte direto com o fundador</li><li>✓ Acesso vitalício nesta condição</li></ul></div><div className="price-box"><p>PAGAMENTO ÚNICO</p><div><small>R$</small><strong>97</strong><sup>,00</sup></div><span>Sem mensalidade</span><BuyButton label="GARANTIR MEU ACESSO" /><small>Compra segura • acesso imediato</small></div></div>
+      <div className="offer-card" data-reveal><div className="offer-main"><span className="section-kicker light">CONDIÇÃO PARA OS PRIMEIROS ALUNOS</span><h2>TUDO O QUE VOCÊ PRECISA PARA COMEÇAR.</h2><ul><li>Treinamento completo e prático</li><li>Acesso pelo celular ou computador</li><li>Agentes MAX e RUI</li><li>Comunidade exclusiva no WhatsApp</li><li>Suporte direto com o fundador</li><li>Acesso vitalício nesta condição</li></ul></div><div className="price-box"><p>PAGAMENTO ÚNICO</p><div><small>R$</small><strong>97</strong><sup>,00</sup></div><span>Sem mensalidade</span><BuyButton label="GARANTIR MEU ACESSO" /><small>Compra segura • acesso imediato</small></div></div>
       <div className="guarantee" data-reveal><div>7</div><div><h3>DIAS PARA DECIDIR COM TRANQUILIDADE.</h3><p>Acesse o conteúdo e conheça a metodologia. Se não fizer sentido para você, solicite o reembolso dentro do prazo de garantia.</p></div></div>
     </section>
 
